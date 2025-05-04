@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avukat Web Sitesi | örneği</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background: #0077ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005ec2;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Avukat Web Sitesi</h1>
+  <p>Profesyonel avukatlar için tasarlanmış modern web sitesi</p>
+</header>
+
+<section>
+  <h2>İletişim</h2>
+  <form>
+    <input type="text" placeholder="Adınız" required />
+    <input type="email" placeholder="E-posta" required />
+    <textarea placeholder="Mesajınız" required></textarea>
+    <button type="submit">Gönder</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Muhammed. Tüm hakları saklıdır.</p>
+</footer>
+
+</body>
+</html>
