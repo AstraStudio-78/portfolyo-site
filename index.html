@@ -18,7 +18,7 @@
       font-family: sans-serif;
       line-height: 1.6;
       color: #333;
-      background: #f9f9f9;
+      background: #f0f0f0; /* Çok açık gri arka plan rengi */
       padding: 20px;
     }
 
@@ -36,8 +36,13 @@
 
     nav a {
       text-decoration: none;
-      color: #0077ff;
+      color: #0077ff; /* Linklerin rengi mavi */
       font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #005ec2; /* Hover durumunda koyu mavi renk */
+      text-decoration: underline; /* Altını çizebiliriz */
     }
 
     section {
@@ -58,6 +63,17 @@
       background: #e0f0ff;
       padding: 15px;
       border-radius: 8px;
+    }
+
+    .proje a {
+      text-decoration: none;
+      color: #0077ff; /* Linklerin rengi mavi */
+      font-weight: bold;
+    }
+
+    .proje a:hover {
+      color: #005ec2; /* Hover durumunda koyu mavi renk */
+      text-decoration: underline; /* Altını çizebiliriz */
     }
 
     form {
@@ -95,51 +111,51 @@
 </head>
 <body>
 
-<header>
-  <h1>Astra Studio</h1>
-  <p>Frontend Web Developer | HTML & CSS Uzmanı</p>
-</header>
+  <header>
+    <h1><span style="color:#4F46E5;">Astra</span> Studio</h1>
+    <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
+  </header>  
 
-<nav>
-  <a href="#hakkimda">Hakkımda</a>
-  <a href="#projeler">Projeler</a>
-  <a href="#iletisim">İletişim</a>
-</nav>
+  <nav>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
 
-<section id="hakkimda">
-  <h2>Hakkımda</h2>
-  <p>Merhaba! Basit ve şık web siteleri tasarlıyorum. Küçük işletmeler ve kişisel markalar için modern, mobil uyumlu siteler hazırlıyorum.</p>
-</section>
+  <section id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p>Merhaba! Basit ve şık web siteleri tasarlıyorum. Küçük işletmeler ve kişisel markalar için modern, mobil uyumlu siteler hazırlıyorum.</p>
+  </section>
 
-<section id="projeler">
-  <h2>Projelerim</h2>
-  <div class="projeler">
-    <div class="proje">
-      <h3>Kafe Web Sitesi</h3>
-      <p>Modern kafe tanıtım sitesi. Mobil uyumlu ve hızlı.</p>
-      <a href="http://127.0.0.1:5500/kafei%C3%A7in.html">Örneği Gör</a>
+  <section id="projeler">
+    <h2>Projelerim</h2>
+    <div class="projeler">
+      <div class="proje">
+        <h3>Kafe Web Sitesi</h3>
+        <p>Modern kafe tanıtım sitesi. Mobil uyumlu ve hızlı.</p>
+        <a href="http://127.0.0.1:5500/kafei%C3%A7in.html">Örneği Gör</a>
+      </div>
+      <div class="proje">
+        <h3>Avukat Portfolyo</h3>
+        <p>Avukatlar için tanıtım ve iletişim sitesi.</p>
+        <a href="http://127.0.0.1:5500/Avukati%C3%A7im.html">Örneği Gör</a>
+      </div>
     </div>
-    <div class="proje">
-      <h3>Avukat Portfolyo</h3>
-      <p>Avukatlar için tanıtım ve iletişim sitesi.</p>
-      <a href="http://127.0.0.1:5500/Avukati%C3%A7im.html">Örneği Gör</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="iletisim">
-  <h2>İletişim</h2>
-  <form action="https://formspree.io/f/xwpoldww" method="POST">
-    <input type="text" name="name" placeholder="Adınız" required />
-    <input type="email" name="email" placeholder="E-posta" required />
-    <textarea name="message" placeholder="Telefon numaranız ve Mesajınız" required></textarea>
-    <button type="submit">Gönder</button>
-  </form>
-</section>
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <form action="https://formspree.io/f/xwpoldww" method="POST">
+      <input type="text" name="name" placeholder="Adınız" required />
+      <input type="email" name="email" placeholder="E-posta" required />
+      <textarea name="message" placeholder="Telefon numaranız ve Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
 
-<footer>
-  <p>© 2025 [Muhammed Alkasım]. Tüm hakları saklıdır.</p>
-</footer>
+  <footer>
+    <p>© 2025 Astra Studio. Tüm hakları saklıdır.</p>
+  </footer>
 
 </body>
 </html>
