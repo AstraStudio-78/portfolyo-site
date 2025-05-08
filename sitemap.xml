@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://webcrafter78.github.io/portfolyo-site/</loc>
-  </url>
-
-  <url>
-    <loc>http://127.0.0.1:5500/kafe.html</loc>
-  </url>
-
-  <url>
-    <loc>http://127.0.0.1:5500/Avukat.html</loc>
-  </url>
-
+   <url>
+      <loc>https://webcrafter78.github.io/portfolyo-site/</loc>
+   </url>
+   <url>
+      <loc>https://webcrafter78.github.io/portfolyo-site/kafe.html</loc>
+   </url>
+   <url>
+      <loc>https://webcrafter78.github.io/portfolyo-site/Avukat.html</loc>
+   </url>
 </urlset>
