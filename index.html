@@ -9,8 +9,6 @@
   <title>Astra Studio-78</title>
   <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     /* Reset */
     * {
@@ -22,15 +20,11 @@
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #f0f0f0;
       padding: 20px;
       max-width: 1000px;
       margin: auto;
-      background: white;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       border-radius: 12px;
-      transition: background 0.3s, color 0.3s;
+      position: relative;
     }
 
     h1 {
@@ -55,7 +49,7 @@
     }
 
     nav a {
-      background: #0077ff;
+      background: #333;
       color: white;
       padding: 8px 16px;
       border-radius: 20px;
@@ -65,16 +59,16 @@
     }
 
     nav a:hover {
-      background: #005ec2;
+      background: #555;
       transform: scale(1.05);
     }
 
     section {
       margin-bottom: 40px;
       padding: 20px;
-      background: #f9f9f9;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 5px rgba(255,255,255,0.05);
     }
 
     .projeler {
@@ -84,7 +78,7 @@
     }
 
     .proje {
-      background: #e0f0ff;
+      background: #2a2a2a;
       padding: 15px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -98,12 +92,12 @@
 
     .proje a {
       text-decoration: none;
-      color: #0077ff;
+      color: #4F9dff;
       font-weight: bold;
     }
 
     .proje a:hover {
-      color: #005ec2;
+      color: #82c7ff;
       text-decoration: underline;
     }
 
@@ -115,13 +109,15 @@
 
     input, textarea {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #444;
       border-radius: 4px;
+      background-color: #2a2a2a;
+      color: #f0f0f0;
     }
 
     button {
       padding: 10px;
-      background: linear-gradient(90deg, #0077ff, #4F46E5);
+      background: linear-gradient(90deg, #4F46E5, #0077ff);
       color: white;
       border: none;
       border-radius: 30px;
@@ -130,7 +126,7 @@
     }
 
     button:hover {
-      background: linear-gradient(90deg, #4F46E5, #0077ff);
+      background: linear-gradient(90deg, #0077ff, #4F46E5);
       transform: scale(1.05);
     }
 
@@ -138,94 +134,32 @@
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      color: #666;
+      color: #999;
     }
 
-    /* Telefon input özel stili */
+    /* Telefon inputu */
     .phone-input {
       display: flex;
       align-items: center;
+      gap: 5px;
     }
 
     .phone-input .country-code {
-      padding: 10px 14px;
-      background: #eee;
-      border: 1px solid #ccc;
-      border-right: none;
+      padding: 10px;
+      border: 1px solid #444;
       border-radius: 4px 0 0 4px;
-      font-weight: bold;
+      background: #2a2a2a;
+      color: #f0f0f0;
     }
 
     .phone-input input {
       flex: 1;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-left: none;
       border-radius: 0 4px 4px 0;
-      transition: border-color 0.3s, box-shadow 0.3s;
     }
 
-    .phone-input input:focus {
-      border-color: #0077ff;
-      box-shadow: 0 0 5px rgba(0, 119, 255, 0.4);
-      outline: none;
-    }
-
-    @media (max-width: 480px) {
-      .phone-input {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .phone-input .country-code {
-        border-radius: 4px 4px 0 0;
-        border-right: 1px solid #ccc;
-      }
-
-      .phone-input input {
-        border-left: 1px solid #ccc;
-        border-radius: 0 0 4px 4px;
-      }
-    }
-
-    /* Dark Mode */
-    .dark-mode {
-      background-color: #333;
-      color: #fff;
-    }
-
-    .dark-mode a {
-      color: #fff;
-    }
-
-    .dark-mode button {
-      background: linear-gradient(90deg, #4F46E5, #0077ff);
-      color: white;
-    }
-
-    /* Scroll to top button */
-    .scroll-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0077ff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 15px;
-      cursor: pointer;
-      font-size: 16px;
-      display: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-    }
-
-    .scroll-to-top:hover {
-      background: #005ec2;
-    }
   </style>
 </head>
-<body>
+<body class="dark-mode">
 
   <header>
     <h1>Astra Studio</h1>
@@ -236,7 +170,6 @@
     <a href="#hakkimda">Hakkımda</a>
     <a href="#projeler">Projeler</a>
     <a href="#iletisim">İletişim</a>
-    <button onclick="toggleDarkMode()">Dark Mode</button>
   </nav>
 
   <section id="hakkimda">
@@ -267,7 +200,7 @@
       <input type="email" name="email" placeholder="E-posta" required />
       <div class="phone-input">
         <span class="country-code">+90</span>
-        <input type="tel" name="phone" placeholder="5XX XXX XX XX" pattern="5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}" inputmode="tel" required>
+        <input type="tel" name="phone" placeholder="Telefon numaranız" inputmode="tel" pattern="[0-9]{10}" required />
       </div>
       <textarea name="message" placeholder="Mesajınız" required></textarea>
       <button type="submit">Gönder</button>
@@ -278,28 +211,6 @@
     <p>© 2025 Astra Studio. Tüm hakları saklıdır.</p>
   </footer>
 
-  <!-- Scroll to top button -->
-  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
-
-  <script>
-    // Dark mode toggle
-    const toggleDarkMode = () => {
-      document.body.classList.toggle('dark-mode');
-    };
-
-    // Scroll to top functionality
-    window.onscroll = function() {
-      let scrollButton = document.querySelector(".scroll-to-top");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollButton.style.display = "block";
-      } else {
-        scrollButton.style.display = "none";
-      }
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
+
