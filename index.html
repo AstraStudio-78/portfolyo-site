@@ -20,22 +20,26 @@
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      color: #e0e0e0;
-      background: #121212;
+      color: #333;
+      background: #2a2a2a; /* Koyu arka plan */
       padding: 20px;
       max-width: 1000px;
       margin: auto;
-      background: #121212;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      background: #2a2a2a;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       border-radius: 12px;
+      color: #f0f0f0; /* Açık yazılar */
     }
 
     h1 {
-      background: linear-gradient(90deg, #FFA500, #ff7b00);
+      background: linear-gradient(90deg, #FF8C00, #FF6600); /* Önceki turuncu renkler */
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       -webkit-text-fill-color: transparent;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
 
     header {
@@ -52,33 +56,33 @@
     }
 
     nav a {
-      background: #2a2a2a;
-      color: #FFA500;
+      background: #FF8C00; /* Önceki turuncu renk */
+      color: white;
       padding: 8px 16px;
       border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s ease;
-      border: 1px solid #444;
     }
 
     nav a:hover {
-      background: #333333;
-      color: #ff7b00;
+      background: #FF6600; /* Önceki turuncu renk */
       transform: scale(1.05);
     }
 
     section {
       margin-bottom: 40px;
       padding: 20px;
-      background: #2a2a2a;
+      background: #333; /* Koyu gri arka plan */
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      color: #fff; /* Açık yazılar */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    h2 {
-      color: #FFA500;
-      margin-bottom: 10px;
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .projeler {
@@ -88,26 +92,26 @@
     }
 
     .proje {
-      background: #333333;
+      background: #444; /* Koyu gri kutular */
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
 
     .proje:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .proje a {
       text-decoration: none;
-      color: #FFA500;
+      color: #FF8C00; /* Önceki turuncu renk */
       font-weight: bold;
     }
 
     .proje a:hover {
-      color: #ff7b00;
+      color: #FF6600; /* Önceki turuncu renk */
       text-decoration: underline;
     }
 
@@ -119,29 +123,24 @@
 
     input, textarea {
       padding: 10px;
-      border: 1px solid #444;
+      border: 1px solid #ccc;
       border-radius: 4px;
-      background: #333333;
-      color: #e0e0e0;
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: #aaa;
+      background: #444; /* Koyu gri inputlar */
+      color: #fff; /* Açık yazılar */
     }
 
     button {
       padding: 10px;
-      background: linear-gradient(90deg, #FFA500, #ff7b00);
-      color: black;
+      background: linear-gradient(90deg, #FF8C00, #FF6600); /* Önceki turuncu renkler */
+      color: white;
       border: none;
       border-radius: 30px;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-weight: bold;
     }
 
     button:hover {
-      background: linear-gradient(90deg, #ff7b00, #FFA500);
+      background: linear-gradient(90deg, #FF6600, #FF8C00); /* Önceki turuncu renkler */
       transform: scale(1.05);
     }
 
@@ -149,16 +148,32 @@
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      color: #888;
+      color: #666;
     }
+
+    footer a {
+      color: #FF8C00; /* Önceki turuncu renk */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dark Mode (Sürekli aktif) */
+    .dark-mode {
+      background-color: #2a2a2a;
+      color: #f0f0f0;
+    }
+
   </style>
 </head>
-<body>
+<body class="dark-mode">
 
   <header>
     <h1>Astra Studio</h1>
     <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
-  </header>  
+  </header>
 
   <nav>
     <a href="#hakkimda">Hakkımda</a>
