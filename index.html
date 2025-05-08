@@ -10,163 +10,173 @@
   <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  /* Tüm önceki stil kodlarını silip, buradaki yeni kodları ekleyeceksiniz */
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #2a2a2a; /* Koyu arka plan */
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-      background: #2a2a2a;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      border-radius: 12px;
-      color: #f0f0f0; /* Açık yazılar */
-    }
+  h2 {
+    color: #FF8C00; /* Turuncu renk */
+  }
 
-    h1 {
-      background: linear-gradient(90deg, #FF8C00, #FF6600); /* Önceki turuncu renkler */
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
+  .proje h3 {
+    color: #ffff; /* Turuncu renk */
+  }
 
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+  /* Diğer stil kodları kaldığı gibi kalacak */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #2a2a2a; /* Koyu arka plan */
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    color: #f0f0f0; /* Açık yazılar */
+  }
 
-    nav a {
-      background: #FF8C00; /* Önceki turuncu renk */
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
+  h1 {
+    background: linear-gradient(90deg, #FF8C00, #FF6600); /* Önceki turuncu renkler */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
 
-    nav a:hover {
-      background: #FF6600; /* Önceki turuncu renk */
-      transform: scale(1.05);
-    }
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    section {
-      margin-bottom: 40px;
-      padding: 20px;
-      background: #333; /* Koyu gri arka plan */
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      color: #fff; /* Açık yazılar */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
 
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
+  nav a {
+    background: #FF8C00; /* Önceki turuncu renk */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
 
-    .projeler {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
+  nav a:hover {
+    background: #FF6600; /* Önceki turuncu renk */
+    transform: scale(1.05);
+  }
 
-    .proje {
-      background: #444; /* Koyu gri kutular */
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
+  section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #333; /* Koyu gri arka plan */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: #fff; /* Açık yazılar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    .proje:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
 
-    .proje a {
-      text-decoration: none;
-      color: #FF8C00; /* Önceki turuncu renk */
-      font-weight: bold;
-    }
+  .projeler {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
 
-    .proje a:hover {
-      color: #FF6600; /* Önceki turuncu renk */
-      text-decoration: underline;
-    }
+  .proje {
+    background: #444; /* Koyu gri kutular */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+  .proje:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
 
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background: #444; /* Koyu gri inputlar */
-      color: #fff; /* Açık yazılar */
-    }
+  .proje a {
+    text-decoration: none;
+    color: #FF8C00; /* Önceki turuncu renk */
+    font-weight: bold;
+  }
 
-    button {
-      padding: 10px;
-      background: linear-gradient(90deg, #FF8C00, #FF6600); /* Önceki turuncu renkler */
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+  .proje a:hover {
+    color: #FF6600; /* Önceki turuncu renk */
+    text-decoration: underline;
+  }
 
-    button:hover {
-      background: linear-gradient(90deg, #FF6600, #FF8C00); /* Önceki turuncu renkler */
-      transform: scale(1.05);
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-    }
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #444; /* Koyu gri inputlar */
+    color: #fff; /* Açık yazılar */
+  }
 
-    footer a {
-      color: #FF8C00; /* Önceki turuncu renk */
-      text-decoration: none;
-    }
+  button {
+    padding: 10px;
+    background: linear-gradient(90deg, #FF8C00, #FF6600); /* Önceki turuncu renkler */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+  button:hover {
+    background: linear-gradient(90deg, #FF6600, #FF8C00); /* Önceki turuncu renkler */
+    transform: scale(1.05);
+  }
 
-    /* Dark Mode (Sürekli aktif) */
-    .dark-mode {
-      background-color: #2a2a2a;
-      color: #f0f0f0;
-    }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+  }
 
-  </style>
+  footer a {
+    color: #FF8C00; /* Önceki turuncu renk */
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Dark Mode (Sürekli aktif) */
+  .dark-mode {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+  }
+</style>
+
 </head>
 <body class="dark-mode">
 
@@ -181,7 +191,7 @@
     <a href="#iletisim">İletişim</a>
   </nav>
 
-  <section id="hakkimda">
+  <section id="orange">
     <h2>Hakkımda</h2>
     <p>Merhaba! Basit ve şık web siteleri tasarlıyorum. Küçük işletmeler ve kişisel markalar için modern, mobil uyumlu siteler hazırlıyorum. Web tasarımı ve geliştirme konusunda tutkuluyum. Her projeye özenle yaklaşarak, kullanıcı dostu ve estetik açıdan çekici web deneyimleri sunmayı hedefliyorum.</p>
   </section>
