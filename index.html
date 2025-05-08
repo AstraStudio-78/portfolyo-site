@@ -137,6 +137,53 @@
       font-size: 0.9em;
       color: #666;
     }
+
+    /* Telefon input özel stili */
+    .phone-input {
+      display: flex;
+      align-items: center;
+    }
+
+    .phone-input .country-code {
+      padding: 10px 14px;
+      background: #eee;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      font-weight: bold;
+    }
+
+    .phone-input input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .phone-input input:focus {
+      border-color: #0077ff;
+      box-shadow: 0 0 5px rgba(0, 119, 255, 0.4);
+      outline: none;
+    }
+
+    @media (max-width: 480px) {
+      .phone-input {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .phone-input .country-code {
+        border-radius: 4px 4px 0 0;
+        border-right: 1px solid #ccc;
+      }
+
+      .phone-input input {
+        border-left: 1px solid #ccc;
+        border-radius: 0 0 4px 4px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -178,7 +225,13 @@
     <form action="https://formspree.io/f/xwpoldww" method="POST">
       <input type="text" name="name" placeholder="Adınız" required />
       <input type="email" name="email" placeholder="E-posta" required />
-      <textarea name="message" placeholder="Telefon numaranız " required></textarea>
+
+      <div class="phone-input">
+        <span class="country-code">+90</span>
+        <input type="tel" name="phone" placeholder="5XX XXX XX XX" pattern="5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}" inputmode="tel" required>
+      </div>
+
+      <textarea name="message" placeholder="Mesajınız" required></textarea>
       <button type="submit">Gönder</button>
     </form>
   </section>
