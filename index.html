@@ -220,10 +220,17 @@
   <script>
     document.querySelector("form").addEventListener("submit", function(event) {
       var phoneInput = document.querySelector("input[name='phone']");
-      var phonePattern = /^\+90\s?5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$/;
-      
+      var phoneValue = phoneInput.value.trim();
+  
+      // Eğer kullanıcı +90 eklememişse, başına ekle
+      if (!phoneValue.startsWith("+90")) {
+        phoneInput.value = "+90" + phoneValue;
+      }
+  
+      // Sayısal karakter kontrolü
+      var phonePattern = /^\+90\d+$/;  // +90 ve sonra sadece rakamlar kabul edilir
       if (!phonePattern.test(phoneInput.value)) {
-        alert("Lütfen telefon numarasını doğru biçimde giriniz: +90 5xx xxx xx xx");
+        alert("Lütfen telefon numarasını doğru biçimde giriniz.");
         event.preventDefault();  // Form gönderimini engelle
       }
     });
