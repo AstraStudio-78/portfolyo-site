@@ -20,15 +20,18 @@
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
+      color: #e0e0e0;
+      background: #121212;
       padding: 20px;
       max-width: 1000px;
       margin: auto;
+      background: #121212;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       border-radius: 12px;
-      position: relative;
     }
 
     h1 {
-      background: linear-gradient(90deg, #4F46E5, #0077ff);
+      background: linear-gradient(90deg, #FFA500, #ff7b00);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -49,26 +52,33 @@
     }
 
     nav a {
-      background: #333;
-      color: white;
+      background: #2a2a2a;
+      color: #FFA500;
       padding: 8px 16px;
       border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s ease;
+      border: 1px solid #444;
     }
 
     nav a:hover {
-      background: #555;
+      background: #333333;
+      color: #ff7b00;
       transform: scale(1.05);
     }
 
     section {
       margin-bottom: 40px;
       padding: 20px;
+      background: #2a2a2a;
       border-radius: 8px;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #FFA500;
+      margin-bottom: 10px;
     }
 
     .projeler {
@@ -78,26 +88,26 @@
     }
 
     .proje {
-      background: #2a2a2a;
+      background: #333333;
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
     }
 
     .proje:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .proje a {
       text-decoration: none;
-      color: #4F9dff;
+      color: #FFA500;
       font-weight: bold;
     }
 
     .proje a:hover {
-      color: #82c7ff;
+      color: #ff7b00;
       text-decoration: underline;
     }
 
@@ -111,22 +121,27 @@
       padding: 10px;
       border: 1px solid #444;
       border-radius: 4px;
-      background-color: #2a2a2a;
-      color: #f0f0f0;
+      background: #333333;
+      color: #e0e0e0;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
     }
 
     button {
       padding: 10px;
-      background: linear-gradient(90deg, #4F46E5, #0077ff);
-      color: white;
+      background: linear-gradient(90deg, #FFA500, #ff7b00);
+      color: black;
       border: none;
       border-radius: 30px;
       cursor: pointer;
       transition: all 0.3s ease;
+      font-weight: bold;
     }
 
     button:hover {
-      background: linear-gradient(90deg, #0077ff, #4F46E5);
+      background: linear-gradient(90deg, #ff7b00, #FFA500);
       transform: scale(1.05);
     }
 
@@ -134,32 +149,11 @@
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      color: #999;
+      color: #888;
     }
-
-    /* Telefon inputu */
-    .phone-input {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .phone-input .country-code {
-      padding: 10px;
-      border: 1px solid #444;
-      border-radius: 4px 0 0 4px;
-      background: #2a2a2a;
-      color: #f0f0f0;
-    }
-
-    .phone-input input {
-      flex: 1;
-      border-radius: 0 4px 4px 0;
-    }
-
   </style>
 </head>
-<body class="dark-mode">
+<body>
 
   <header>
     <h1>Astra Studio</h1>
@@ -198,10 +192,7 @@
     <form action="https://formspree.io/f/xwpoldww" method="POST">
       <input type="text" name="name" placeholder="Adınız" required />
       <input type="email" name="email" placeholder="E-posta" required />
-      <div class="phone-input">
-        <span class="country-code">+90</span>
-        <input type="tel" name="phone" placeholder="Telefon numaranız" inputmode="tel" pattern="[0-9]{10}" required />
-      </div>
+      <input type="tel" name="phone" placeholder="+90 5xx xxx xx xx" inputmode="tel" pattern="^\+90\s5\d{2}\s\d{3}\s\d{2}\s\d{2}$" required />
       <textarea name="message" placeholder="Mesajınız" required></textarea>
       <button type="submit">Gönder</button>
     </form>
