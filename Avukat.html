@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Avukat Web Sitesi | örneği</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <style>
     /* Reset */
     * {
@@ -13,10 +14,10 @@
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
+      color: #f0f0f0; /* Açık yazılar */
+      background: #2a2a2a; /* Koyu arka plan */
       padding: 20px;
     }
 
@@ -25,10 +26,26 @@
       margin-bottom: 20px;
     }
 
+    h1 {
+      background: linear-gradient(90deg, #FF8C00, #FF6600); /* Turuncu renk */
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #bbb; /* Gri metin */
+      font-size: 1rem;
+    }
+
     section {
       margin-bottom: 40px;
       padding: 20px;
-      background: white;
+      background: #333; /* Koyu gri arka plan */
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
@@ -41,44 +58,64 @@
 
     input, textarea {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #444;
       border-radius: 4px;
+      background: #444; /* Koyu gri inputlar */
+      color: #f0f0f0; /* Açık yazılar */
     }
 
     button {
       padding: 10px;
-      background: #0077ff;
+      background: #FF8C00; /* Turuncu renk */
       color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 30px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     button:hover {
-      background: #005ec2;
+      background: #FF6600; /* Daha koyu turuncu */
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      color: #666;
+      color: #bbb; /* Gri footer yazısı */
     }
+
+    footer a {
+      color: #FF8C00; /* Turuncu renk */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
   <h1>Avukat Web Sitesi</h1>
-  <p>Profesyonel avukatlar için tasarlanmış modern web sitesi</p>
+  <br>
+  <p>Sadece Örnektir.</p>
 </header>
 
 <section>
+  <h2>Hakkımda</h2>
+  <p>Ben, hukuk alanında uzmanlaşmış, müvekkillerine en iyi hizmeti sunmak için sürekli kendini geliştiren bir avukatım. Web sitem aracılığıyla, hukuki hizmetlerim hakkında bilgi alabilir ve iletişime geçebilirsiniz.</p>
+</section>
+
+<section>
   <h2>İletişim</h2>
-  <form>
-    <input type="text" placeholder="Adınız" required />
-    <input type="email" placeholder="E-posta" required />
-    <textarea placeholder="Mesajınız" required></textarea>
+  <form action="https://formspree.io/f/xwpoldww" method="POST">
+    <input type="text" name="name" placeholder="Adınız" required />
+    <input type="email" name="email" placeholder="E-posta" required />
+    <textarea name="message" placeholder="Mesajınız" required></textarea>
     <button type="submit">Gönder</button>
   </form>
 </section>
