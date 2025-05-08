@@ -9,6 +9,8 @@
   <title>Astra Studio-78</title>
   <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     /* Reset */
     * {
@@ -184,6 +186,42 @@
         border-radius: 0 0 4px 4px;
       }
     }
+
+    /* Dark Mode */
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .dark-mode a {
+      color: #fff;
+    }
+
+    .dark-mode button {
+      background: linear-gradient(90deg, #4F46E5, #0077ff);
+      color: white;
+    }
+
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0077ff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .scroll-to-top:hover {
+      background: #005ec2;
+    }
   </style>
 </head>
 <body>
@@ -225,12 +263,10 @@
     <form action="https://formspree.io/f/xwpoldww" method="POST">
       <input type="text" name="name" placeholder="Adınız" required />
       <input type="email" name="email" placeholder="E-posta" required />
-
       <div class="phone-input">
         <span class="country-code">+90</span>
         <input type="tel" name="phone" placeholder="5XX XXX XX XX" pattern="5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}" inputmode="tel" required>
       </div>
-
       <textarea name="message" placeholder="Mesajınız" required></textarea>
       <button type="submit">Gönder</button>
     </form>
@@ -240,5 +276,28 @@
     <p>© 2025 Astra Studio. Tüm hakları saklıdır.</p>
   </footer>
 
+  <!-- Scroll to top button -->
+  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Dark mode toggle
+    const toggleDarkMode = () => {
+      document.body.classList.toggle('dark-mode');
+    };
+
+    // Scroll to top functionality
+    window.onscroll = function() {
+      let scrollButton = document.querySelector(".scroll-to-top");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollButton.style.display = "block";
+      } else {
+        scrollButton.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
