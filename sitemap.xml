@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://AstraStudio-78.github.io/portfolyo-site/kafe.html</loc>
-    <lastmod>2025-05-08</lastmod> <!-- Son güncelleme tarihi -->
-    <changefreq>monthly</changefreq> <!-- Sayfa güncellenme sıklığı -->
-    <priority>0.8</priority> <!-- Sayfanın önceliği (0.0 - 1.0 arası) -->
-  </url>
-  
-  <url>
-    <loc>https://AstraStudio-78.github.io/portfolyo-site/Avukat.html</loc>
+    <loc>https://astrastudio-78.github.io/portfolyo-site/kafe.html</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://astrastudio-78.github.io/portfolyo-site/Avukat.html</loc>
+    <lastmod>2025-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
