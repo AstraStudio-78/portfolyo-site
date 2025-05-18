@@ -39,28 +39,7 @@
       border-radius: 8px;
     }
 
-    .star-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      position: relative;
-    }
-
-    .star {
-      font-size: 60px;
-      color: #FFD700;
-      animation: starMove 2s infinite alternate ease-in-out;
-    }
-
-    .star.left {
-      animation-direction: alternate-reverse;
-    }
-
-    @keyframes starMove {
-      0% { transform: translateX(-5px); }
-      100% { transform: translateX(5px); }
-    }
+    
 
     nav {
       display: flex;
@@ -233,14 +212,12 @@
     <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
   </header>
 
-  <div class="star-container">
-    <div class="star left">★</div>
+  <div>
     <nav>
       <a href="#hakkimda">Hakkımda</a>
       <a href="#projeler">Projeler</a>
       <a href="#iletisim">İletişim</a>
     </nav>
-    <div class="star right">★</div>
   </div>
 
   <section id="hakkimda">
