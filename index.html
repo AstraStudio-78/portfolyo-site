@@ -7,8 +7,8 @@
   <meta name="keywords" content="Ucuz, web tasarım, portföy, yazılım geliştirici, frontend, html, css">
   <meta name="google-site-verification" content="PO8FzRg3YC91SwV4jtsgANvx4ekezxQPR88Ed2684QU" />
   <title>Astra Studio-78</title>
-  <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -28,28 +28,27 @@
       border-radius: 12px;
     }
 
-    h1 {
-      background: linear-gradient(90deg, #FF8C00, #FF6600);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
+    /* Başlıklarda glow yok, sadece turuncu renk */
+    h1, h2 {
       color: #FF8C00;
+      text-shadow: none;
+      background: none;
     }
 
+    
     .proje h3 {
       color: #fff;
+      text-shadow: none;
     }
+
+    
 
     header {
       text-align: center;
       margin-bottom: 20px;
+
+      padding: 15px;
+      border-radius: 8px;
     }
 
     nav {
@@ -68,11 +67,13 @@
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s ease;
+      
     }
 
     nav a:hover {
       background: #FF6600;
       transform: scale(1.05);
+      
     }
 
     section {
@@ -80,14 +81,13 @@
       padding: 20px;
       background: #333;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       color: #fff;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 10px rgba(255, 140, 0, 0.9);
     }
 
     .projeler {
@@ -100,24 +100,25 @@
       background: #444;
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      
       transition: all 0.3s ease;
     }
 
     .proje:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .proje a {
       text-decoration: none;
       color: #FF8C00;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     .proje a:hover {
       color: #FF6600;
       text-decoration: underline;
+      
     }
 
     footer {
@@ -157,6 +158,14 @@
       border-radius: 4px;
       font-size: 1em;
       outline: none;
+      box-shadow: 0 0 6px #FF8C00AA;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      box-shadow: 0 0 12px #FF8C00DD;
+      border-color: #FF8C00;
     }
 
     .form-group label {
@@ -189,11 +198,13 @@
       border-radius: 30px;
       cursor: pointer;
       transition: all 0.3s ease;
+      
     }
 
     button:hover {
       background: linear-gradient(90deg, #FF6600, #FF8C00);
       transform: scale(1.05);
+      box-shadow: 0 0 15px #FF6600CC;
     }
 
     .dark-mode {
