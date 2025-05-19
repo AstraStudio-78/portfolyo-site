@@ -35,54 +35,83 @@
 
   header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: -35px;
     padding: 15px;
     border-radius: 8px;
+    position: relative; /* Header içinde yıldızlar için */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* yıldızlar tavana */
+    gap: 150px;
   }
 
-  .star-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 15px;
+  header h1 {
+    font-size: 53px;
+    color: #2563EB;
+    margin: 0 20px;
     position: relative;
-    margin-bottom: 30px;
+    z-index: 1;
+    margin-top: 50px;
+  }
+
+  header p {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    color: #ccc;
+    font-weight: 500;
+    margin-top: 50px;
+  }
+
+  /* Yıldız ip container header içinde */
+  .star-wrapper {
+    position: relative;
+    margin-bottom: 0px;
+    margin-left: -100px;
+    margin-right: -100px;
+    width: 2px;
+    height: 150px;
+    transform-origin: top center ;
+    
+  }
+
+  .star-wrapper.left {
+    animation: swingLeft 2s infinite ease-in-out alternate;
+  }
+
+  .star-wrapper.right {
+    animation: swingRight 2s infinite ease-in-out alternate;
+  }
+
+  .star-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #aaa;
+    transform: translateX(-40%);
   }
 
   .star {
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 60px;
     color: #60A5FA;
-    position: relative;
   }
 
-  .star.left {
-    animation: starMoveLeft 2s infinite alternate ease-in-out;
+  @keyframes swingLeft {
+    0% { transform: rotate(-7deg); }
+    100% { transform: rotate(7deg); }
   }
 
-  .star.right {
-    animation: starMoveRight 2s infinite alternate ease-in-out;
-  }
-
-  /* İpleri çizen pseudo-element */
-  .star::before {
-    content: "";
-    position: absolute;
-    bottom: 83%;
-    left: 50%;
-    width: 2px;
-    height: 200px;
-    background-color: #aaa;
-    transform: translateX(-50%);
-  }
-
-  @keyframes starMoveLeft {
-    0% { transform: translateX(-10px); }
-    100% { transform: translateX(10px); }
-  }
-
-  @keyframes starMoveRight {
-    0% { transform: translateX(10px); }
-    100% { transform: translateX(-10px); }
+  @keyframes swingRight {
+    0% { transform: rotate(7deg); }
+    100% { transform: rotate(-7deg); }
   }
 
   nav {
@@ -91,6 +120,7 @@
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   nav a {
@@ -248,18 +278,25 @@
 <body class="dark-mode">
 
   <header>
-    <h1 style="font-size: 53px;">Astra Studio</h1>
+  <div class="star-wrapper left">
+    <div class="star"><i class="fa-regular fa-star"></i></div>
+  </div>
+
+    <h1>Astra Studio</h1>
+
+  <div class="star-wrapper right">
+    <div class="star"><i class="fa-regular fa-star"></i></div>
+  </div>
+
     <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
   </header>
 
-  <div class="star-container">
-    <div class="star left"><i class="fa-regular fa-star"></i></div>
+  <div>
     <nav>
       <a href="#hakkimda">Hakkımda</a>
       <a href="#projeler">Projeler</a>
       <a href="#iletisim">İletişim</a>
     </nav>
-    <div class="star right"><i class="fa-regular fa-star"></i></div>
   </div>  
 
   <section id="hakkimda">
