@@ -7,9 +7,9 @@
   <meta name="keywords" content="Ucuz, web tasarım, portföy, yazılım geliştirici, frontend, html, css">
   <meta name="google-site-verification" content="PO8FzRg3YC91SwV4jtsgANvx4ekezxQPR88Ed2684QU" />
   <title>Astra Studio-78</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C+X1Z9PLkZXlLsx2a8F1Z9Fp8Vn+z0f0h8QvE0kRxgxz2xQgV6RXlLQGqGvY4B8jE2cg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -40,6 +40,27 @@
       border-radius: 8px;
     }
 
+    .star-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      position: relative;
+    }
+
+    .star {
+      font-size: 60px;
+      color: #FFD700;
+      animation: starMove 2s infinite alternate ease-in-out;
+    }
+    .star.left {
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes starMove {
+      0% { transform: translateX(-5px); }
+      100% { transform: translateX(5px); }
+    }
 
     nav {
       display: flex;
@@ -201,63 +222,25 @@
       background-color: #2a2a2a;
       color: #f0f0f0;
     }
-    /* Yıldız Animasyon Alanı */
-    .yildiz-animasyon {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 300px;
-      pointer-events: none;
-    }
-
-    .yildiz-animasyon svg {
-      width: 100%;
-      height: -300%;
-    }
-
-    .star {
-      fill: black;
-      offset-path: path("M 50 250 Q 200 50 350 250");
-      offset-distance: 0%;
-      animation: moveStar 3s ease-in-out infinite alternate;
-      transform-box: fill-box;
-      transform-origin: center;
-    }
-
-    @keyframes moveStar {
-      0% { offset-distance: 0%; }
-      100% { offset-distance: 100%; }
-    }
-
+    
   </style>
 </head>
 <body class="dark-mode">
 
   <header>
-    <!-- SVG Yıldız Animasyonu -->
-    <div class="yildiz-animasyon">
-      <svg viewBox="0 0 400 300">
-        <!-- Ateş izi (kırmızı çizgi) -->
-        <path d="M 50 250 Q 200 50 350 250" fill="none" stroke="orange" stroke-width="10" />
-
-        <!-- Yıldız (merkezlenmiş) -->
-        <path class="star" stroke="yellow" d="M0,-20 L6,-6 L20,-6 L9,2 L13,16 L0,8 L-13,16 L-9,2 L-20,-6 L-6,-6 Z"
-              transform="scale(1.2)" />
-      </svg>
-    </div>
     <h1 style="font-size: 53px;">Astra Studio</h1>
    
     <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
   </header>
 
-  <div >
+  <div class="star-container" >
+    <div class="star left"><i class="fa-regular fa-star"></i></div>
     <nav>
       <a href="#hakkimda">Hakkımda</a>
       <a href="#projeler">Projeler</a>
       <a href="#iletisim">İletişim</a>
     </nav>
+    <div class="star right"><i class="fa-regular fa-star"></i></div>
   </div>  
 
   <section id="hakkimda">
