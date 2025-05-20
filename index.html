@@ -273,6 +273,37 @@
     background-color: #2a2a2a;
     color: #f0f0f0;
   }
+  @media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 36px; /* Başlığı küçült */
+    margin-top: 30px;
+  }
+  header p {
+    font-size: 14px;
+    top: 80px;
+  }
+  nav {
+    gap: 8px;
+  }
+  nav a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .projeler {
+    grid-template-columns: 1fr; /* Tek sütun yap */
+  }
+  section {
+    padding: 15px;
+  }
+  button {
+    padding: 12px;
+    font-size: 1em;
+  }
+}
+
 </style>
 </head>
 <body class="dark-mode">
