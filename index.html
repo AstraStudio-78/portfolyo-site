@@ -3,390 +3,339 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Muhammed'in web tasarım portföyü. Modern ve şık web siteleri tasarımı ile profesyonel projeler. Web site yapılır. Ucuz web site.">
+  <meta name="description" content="Muhammed'in web tasarım portföyü. Modern ve şık web siteleri tasarımı ile profesyonel projeler.">
   <meta name="keywords" content="Ucuz, web tasarım, portföy, yazılım geliştirici, frontend, html, css">
   <meta name="google-site-verification" content="PO8FzRg3YC91SwV4jtsgANvx4ekezxQPR88Ed2684QU" />
   <title>Astra Studio-78</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="icon" type="image/png" sizes="96x96" href="Resimler/android-icon-96x96.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
   <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #f0f0f0;
-    background: #2a2a2a;
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 12px;
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+      background: #1a1a1a;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-  h1, h2 {
-    color: #2563EB;
-  }
+    h1, h2 {
+      color: #2563EB;
+      text-shadow: none; 
+    }
 
-  header {
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: -35px;
-    padding: 15px;
-    border-radius: 8px;
-    position: relative; /* Header içinde yıldızlar için */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* yıldızlar tavana */
-    gap: 150px;
-  }
 
-  header h1 {
-    font-size: 53px;
-    color: #2563EB;
-    margin: 0 20px;
-    position: relative;
-    z-index: 1;
-    margin-top: 50px;
-  }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-top: 40px;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      position: relative;
+    }
 
-  header p {
-    position: absolute;
-    top: 100px;
-    width: 100%;
-    color: #ccc;
-    font-weight: 500;
-    margin-top: 50px;
-  }
+    header h1 {
+      font-size: clamp(32px, 5vw, 53px);
+      margin-top: 60px;
+      z-index: 1;
+      text-shadow: none; 
+      margin-bottom: 10px;
+    }
 
-  /* Yıldız ip container header içinde */
-  .star-wrapper {
-    position: relative;
-    margin-bottom: 0px;
-    margin-left: -100px;
-    margin-right: -100px;
-    width: 2px;
-    height: 150px;
-    transform-origin: top center ;
-    
-  }
+    header p {
+      position: static;
+      margin-bottom: 15px;
+      width: 100%;
+      color: #ccc;
+      font-weight: 500;
+      z-index: 1;
+    }
 
-  .star-wrapper.left {
-    animation: swingLeft 2s infinite ease-in-out alternate;
-  }
+    .star-wrapper {
+      top:0;
+      position: absolute;
+      width: 2px;
+      height: 150px;
+      transform-origin: top center;
+      z-index: 0;
+      margin-top: -30px;
+    }
 
-  .star-wrapper.right {
-    animation: swingRight 2s infinite ease-in-out alternate;
-  }
+    .star-wrapper.left {
+      animation: swingLeft 2s infinite ease-in-out alternate;
+      left: max(20px, 15%);
+    }
 
-  .star-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background-color: #aaa;
-    transform: translateX(-40%);
-  }
+    .star-wrapper.right {
+      animation: swingRight 2s infinite ease-in-out alternate;
+      right: max(20px, 15%);
+    }
 
-  .star {
-    position: absolute;
-    bottom: -75px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 60px;
-    color: #60A5FA;
-  }
+    .star-wrapper::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: #aaa;
+      transform: translateX(-40%);
+    }
 
-  @keyframes swingLeft {
-    0% { transform: rotate(-7deg); }
-    100% { transform: rotate(7deg); }
-  }
+    .star {
+      position: absolute;
+      bottom: -75px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 60px;
+      color: #60A5FA;
+      text-shadow: none;
+      filter: none;
+    }
 
-  @keyframes swingRight {
-    0% { transform: rotate(7deg); }
-    100% { transform: rotate(-7deg); }
-  }
+    @keyframes swingLeft {
+      0% { transform: rotate(-7deg); }
+      100% { transform: rotate(7deg); }
+    }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
+    @keyframes swingRight {
+      0% { transform: rotate(7deg); }
+      100% { transform: rotate(-7deg); }
+    }
 
-  nav a {
-    background: #2563EB;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
 
-  nav a:hover {
-    background: #0a4ab1;
-    transform: scale(1.05);
-  }
+    nav a {
+      background: #2563EB;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
 
-  section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background: #333;
-    border-radius: 8px;
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    nav a:hover {
+      background: #1d4ed8;
+      transform: scale(1.1);
 
-  section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(37, 99, 235, 0.9);
-  }
+    }
 
-  .projeler {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
+    section {
+      margin-bottom: 30px;
+      padding: 30px;
+      background: #262626;
+      border-radius: 15px;
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+    }
 
-  .proje {
-    background: #444;
-    padding: 15px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
+    section:hover {
+      border-color: #2563EB;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
 
-  .proje:hover {
-    transform: translateY(-5px);
-  }
+    #hakkimda p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #ddd;
+    }
 
-  .proje h3 {
-    color: #fff;
-  }
+    .projeler {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
 
-  .proje a {
-    text-decoration: none;
-    color: #2563EB;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
+    .proje {
+      background: #333;
+      padding: 20px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
 
-  .proje a:hover {
-    color:  #3B82F6;
-    text-decoration: underline;
-  }
+    .proje:hover {
+      background: #3d3d3d;
+    }
 
-  footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #666;
-  }
+    .proje a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #60A5FA;
+      font-weight: bold;
+    }
 
-  footer a {
-    color: #2563EB;
-    text-decoration: none;
-  }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  footer a:hover {
-    text-decoration: underline;
-  }
+    .form-group {
+      position: relative;
+    }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #444;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
 
-  .form-group {
-    position: relative;
-  }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #2563EB;
+      box-shadow: 0 0 8px rgba(37,99,235,0.3);
+    }
 
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #555;
-    background: #444;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 1em;
-    outline: none;
-    box-shadow: 0 0 6px #2563EBAA;
-    transition: box-shadow 0.3s ease;
-  }
+    .form-group label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: #888;
+      transition: 0.3s;
+      pointer-events: none;
+      background: #1a1a1a;
+      padding: 0 5px;
+    }
 
-  .form-group input:focus,
-  .form-group textarea:focus {
-    box-shadow: 0 0 12px #2563EBDD;
-    border-color: #2563EB;
-  }
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 10px;
+      font-size: 0.85rem;
+      color: #2563EB;
+    }
 
-  .form-group label {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: #444;
-    color: #bbb;
-    padding: 0 4px;
-    font-size: 1em;
-    transition: 0.2s ease;
-    pointer-events: none;
-  }
+    button {
+      padding: 14px;
+      background: #2563EB;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-  .form-group input:focus + label,
-  .form-group input:not(:placeholder-shown) + label,
-  .form-group textarea:focus + label,
-  .form-group textarea:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 10px;
-    font-size: 0.8em;
-    color: #2563EB;
-  }
+    button:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+    }
 
-  button {
-    padding: 10px;
-    background: linear-gradient(90deg, #2563EB, #3B82F6);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #666;
+    }
 
-  button:hover {
-    background: linear-gradient(90deg, #3B82F6, #2563EB);
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #2563EB;
-  }
-
-  .dark-mode {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-  }
-  @media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  header h1 {
-    font-size: 36px; /* Başlığı küçült */
-    margin-top: 30px;
-  }
-  header p {
-    font-size: 14px;
-    top: 80px;
-  }
-  nav {
-    gap: 8px;
-  }
-  nav a {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-  .projeler {
-    grid-template-columns: 1fr; /* Tek sütun yap */
-  }
-  section {
-    padding: 15px;
-  }
-  button {
-    padding: 12px;
-    font-size: 1em;
-  }
-}
-@media (max-width: 600px) {
-  .star-wrapper {
-    display: none;
-  }
-  header p{
-    margin-top:30px ;
-  }
-}
-
-</style>
+    @media (max-width: 800px) {
+      .star-wrapper { display: none; }
+      header { padding-bottom: 40px; }
+      section { padding: 20px; }
+    }
+  </style>
 </head>
-<body class="dark-mode">
 
-  <header>
+<body>
+
+<header>
   <div class="star-wrapper left">
     <div class="star"><i class="fa-regular fa-star"></i></div>
   </div>
 
-    <h1>Astra Studio</h1>
+  <h1>Astra Studio</h1>
 
   <div class="star-wrapper right">
     <div class="star"><i class="fa-regular fa-star"></i></div>
   </div>
 
-    <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
-  </header>
+  <p><strong>Frontend Web Developer</strong> | HTML & CSS Uzmanı</p>
+</header>
 
-  <div>
-    <nav>
-      <a href="#hakkimda">Hakkımda</a>
-      <a href="#projeler">Projeler</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
-  </div>  
+<nav>
+  <a href="#hakkimda">Hakkımda</a>
+  <a href="#projeler">Projeler</a>
+  <a href="#iletisim">İletişim</a>
+</nav>
 
-  <section id="hakkimda">
-    <h2>Hakkımda</h2>
-    <p>Merhaba! Basit ve şık web siteleri tasarlıyorum. Küçük işletmeler ve kişisel markalar için modern, mobil uyumlu siteler hazırlıyorum. Web tasarımı ve geliştirme konusunda tutkuluyum. Her projeye özenle yaklaşarak, kullanıcı dostu ve estetik açıdan çekici web deneyimleri sunmayı hedefliyorum.</p>
-  </section>
+<section id="hakkimda">
+  <h2>Hakkımda</h2>
+  <p>Merhaba! Basit ve şık web siteleri tasarlıyorum. Küçük işletmeler ve kişisel markalar için modern, mobil uyumlu siteler hazırlıyorum.Her projeye özenle yaklaşarak, kullanıcı dostu ve estetik açıdan çekici web deneyimleri sunmayı hedefliyorum.</p>
+</section>
 
-  <section id="projeler">
-    <h2>Örnek Projelerim</h2>
-    <div class="projeler">
-      <div class="proje">
-        <h3>Kafe Web Sitesi</h3>
-        <p>Modern kafe tanıtım sitesi. Mobil uyumlu ve hızlı.</p>
-        <a href="https://astraStudio-78.github.io/portfolyo-site/kafe.html" target="_blank">Örneği Gör</a>
-      </div>
-      <div class="proje">
-        <h3>Avukat Portfolyo</h3>
-        <p>Avukatlar için tanıtım ve iletişim sitesi.</p>
-        <a href="https://astraStudio-78.github.io/portfolyo-site/Avukat.html" target="_blank">Örneği Gör</a>
-      </div>
+<section id="projeler">
+  <h2>Örnek Projelerim</h2>
+  <div class="projeler">
+    <div class="proje">
+      <h3>Kafe Web Sitesi</h3>
+      <p>Modern kafe tanıtım sitesi.</p>
+      <a href="https://astraStudio-78.github.io/portfolyo-site/kafe.html" target="_blank">Örneği Gör →</a>
     </div>
-  </section>
+    <div class="proje">
+      <h3>Avukat Portfolyo</h3>
+      <p>Avukatlar için tanıtım sitesi.</p>
+      <a href="https://astraStudio-78.github.io/portfolyo-site/Avukat.html" target="_blank">Örneği Gör →</a>
+    </div>
+  </div>
+</section>
 
-  <section id="iletisim">
-    <h2>İletişim</h2>
-    <form action="https://formspree.io/f/xwpoldww" method="POST">
-      <div class="form-group">
-        <input type="text" name="name" id="name" placeholder=" " required />
-        <label for="name">Adınız</label>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" id="email" placeholder=" " required />
-        <label for="email">E-posta</label>
-      </div>
-      <div class="form-group">
-        <input type="tel" name="phone" id="phone" placeholder=" " inputmode="tel" />
-        <label for="phone">Telefon Numaranız</label>
-      </div>
-      <div class="form-group">
-        <textarea name="message" id="message" placeholder=" " required></textarea>
-        <label for="message">Mesajınız</label>
-      </div>
-      <button type="submit">Gönder</button>
-    </form>
-  </section>
+<section id="iletisim">
+  <h2>İletişim</h2>
+  <form action="https://formspree.io/f/xwpoldww" method="POST">
+    <div class="form-group">
+      <input type="text" name="name" placeholder=" " required />
+      <label>Adınız</label>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder=" " required />
+      <label>E-posta</label>
+    </div>
+    <div class="form-group">
+      <input type="tel" name="phone" placeholder=" " />
+      <label>Telefon Numaranız</label>
+    </div>
+    <div class="form-group">
+      <textarea name="message" rows="4" placeholder=" " required></textarea>
+      <label>Mesajınız</label>
+    </div>
+    <button type="submit">Mesajı Gönder</button>
+  </form>
+</section>
 
-  <footer>
-    <p>© 2025 Astra Studio. Tüm hakları saklıdır.</p>
-  </footer>
+<footer>
+  <p>© 2026 Astra Studio. Tüm hakları saklıdır.</p>
+</footer>
 
-  <script>
+</body>
+</html>
+ <script>
     document.querySelector("form").addEventListener("submit", function(event) {
       var phoneInput = document.querySelector("input[name='phone']");
       var phoneValue = phoneInput.value.trim();
